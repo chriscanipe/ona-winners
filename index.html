@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
 
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+
+
+    <!-- Data Tables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs/jq-2.1.4,dt-1.10.9,af-2.0.0,fc-3.1.0,r-1.0.7/datatables.min.css"/>
+ 
+
 
 
     <link rel="stylesheet" href="css/style.css"/>
@@ -38,7 +45,21 @@
 
             <section class="row">
 
-            <div class="col-md-12 chart"></div>
+            <div class="col-md-12 chart ">
+                
+                <table class="the-table table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Organization</th>
+                            <th>Finalist</th>
+                            <th>Winner</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
 
             </section>
 
@@ -50,13 +71,42 @@
     </div>
 
 
+    <template id="table-card">
+        <tr class='table-card-row'>
+            <td colspan="4">
+                <div class="card">
+                    <div class='close-btn'>CLOSE X</div>
+                    <h3 class='org-name'></h3>
+                    <table class="org-table table-condensed table-striped">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Category</th>
+                            <th>Outcome</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                </div>
+            </td>
+        </tr>
+    </template>
+
+
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
+
+
+
     <!-- Latest compiled and minified Bootstrap JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/r/bs/jq-2.1.4,dt-1.10.9,af-2.0.0,fc-3.1.0,r-1.0.7/datatables.min.js"></script>
+
     <script src="js/script.js"></script>
 
 </body>
